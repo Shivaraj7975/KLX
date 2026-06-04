@@ -1,0 +1,24 @@
+{
+  "name": "clg-project",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Full-stack CLG marketplace - Frontend React + Backend Express",
+  "scripts": {
+    "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run dev\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:frontend",
+    "lint": "cd frontend && npm run lint",
+    "preview": "cd frontend && npm run preview",
+    "start:backend": "cd backend && npm start"
+  ,
+    "snapshot": "node scripts/create_snapshot.cjs",
+    "snapshot:v1": "node scripts/create_snapshot.cjs v1",
+    "revert-snapshot": "node scripts/revert_snapshot.cjs"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080" role="img" aria-label="Repository structure diagram for CLG project">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#bgGrad); }
+      .title { font: 800 38px Arial, Helvetica, sans-serif; fill: #102a59; }
+      .subtitle { font: 500 17px Arial, Helvetica, sans-serif; fill: #4b5563; letter-spacing: 2px; }
+      .repo { font: 700 22px Arial, Helvetica, sans-serif; fill: #ffffff; }
+      .repoIcon { fill: #ffffff; }
+      .panelTitle { font: 800 22px Arial, Helvetica, sans-serif; fill: #10324f; }
+      .item { font: 500 17px Arial, Helvetica, sans-serif; fill: #22313f; }
+      .small { font: 400 14px Arial, Helvetica, sans-serif; fill: #5c6b77; }
+      .box { rx: 18; ry: 18; stroke-width: 2; }
+      .panel { fill: #ffffff; stroke-width: 2.2; }
+      .frontendPanel { fill: #f2f8ff; stroke: #6aa7ef; }
+      .backendPanel { fill: #f4fbf0; stroke: #8bc34a; }
+      .docsPanel { fill: #fff8ec; stroke: #efb34b; }
+      .rootPanel { fill: #fff7f8; stroke: #f08f99; }
+      .rootBar { fill: #0f2d63; stroke: #0f2d63; }
+      .folderBlue { fill: #cfe5ff; }
+      .folderGreen { fill: #d9efc6; }
+      .folderOrange { fill: #ffe5b8; }
+      .folderRed { fill: #ffd6d9; }
+      .line { stroke: #1f2937; stroke-width: 2.5; fill: none; }
+      .branch { stroke: #6b7280; stroke-width: 2; fill: none; }
+      .legendTitle { font: 800 18px Arial, Helvetica, sans-serif; fill: #263238; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1080"/>
+
+  <text x="800" y="52" text-anchor="middle" class="title">CLG Project</text>
+  <text x="800" y="86" text-anchor="middle" class="subtitle">REPOSITORY STRUCTURE</text>
+
+  <rect class="box rootBar" x="560" y="110" width="480" height="54" rx="14" ry="14"/>
+  <rect class="repoIcon" x="586" y="124" width="30" height="24" rx="3" ry="3"/>
+  <path d="M 586 130 L 602 130 L 607 124 L 616 124 L 621 130 L 616 130 L 610 124 L 598 124 L 594 130 Z" fill="#ffffff"/>
+  <text x="800" y="145" text-anchor="middle" class="repo">clg_project</text>
+
+  <path class="line" d="M 800 164 L 800 184"/>
+  <path class="line" d="M 200 184 L 1400 184"/>
+  <path class="branch" d="M 230 184 L 230 218"/>
+  <path class="branch" d="M 605 184 L 605 218"/>
+  <path class="branch" d="M 1000 184 L 1000 218"/>
+  <path class="branch" d="M 1350 184 L 1350 218"/>
+
+  <!-- Frontend column -->
+  <rect class="box panel frontendPanel" x="40" y="218" width="290" height="800"/>
+  <text x="85" y="248" class="panelTitle">frontend/</text>
+
+  <rect x="74" y="270" width="18" height="18" rx="3" ry="3" class="folderBlue"/>
+  <text x="105" y="284" class="item">public/</text>
+  <text x="122" y="310" class="small">index.html</text>
+  <text x="122" y="332" class="small">assets/</text>
+
+  <rect x="74" y="360" width="18" height="18" rx="3" ry="3" class="folderBlue"/>
+  <text x="105" y="374" class="item">src/</text>
+
+  <rect x="96" y="398" width="14" height="14" rx="2" ry="2" class="folderBlue"/>
+  <text x="120" y="411" class="small">components/</text>
+  <text x="138" y="434" class="small">Auth/</text>
+  <text x="138" y="456" class="small">Buyer/</text>
+  <text x="138" y="478" class="small">Seller/</text>
+  <text x="138" y="500" class="small">Admin/</text>
+  <text x="138" y="522" class="small">Requests/</text>
+  <text x="138" y="544" class="small">Common/</text>
+
+  <rect x="96" y="570" width="14" height="14" rx="2" ry="2" class="folderBlue"/>
+  <text x="120" y="583" class="small">pages/</text>
+  <text x="138" y="606" class="small">Home.jsx</text>
+  <text x="138" y="628" class="small">Login.jsx</text>
+  <text x="138" y="650" class="small">Register.jsx</text>
+  <text x="138" y="672" class="small">Dashboard.jsx</text>
+  <text x="138" y="694" class="small">ProductDetails.jsx</text>
+  <text x="138" y="716" class="small">AdminPanel.jsx</text>
+
+  <rect x="96" y="742" width="14" height="14" rx="2" ry="2" class="folderBlue"/>
+  <text x="120" y="755" class="small">services/</text>
+  <text x="138" y="778" class="small">api.js</text>
+  <text x="138" y="800" class="small">authService.js</text>
+
+  <rect x="74" y="830" width="18" height="18" rx="3" ry="3" class="folderBlue"/>
+  <text x="105" y="844" class="item">context/</text>
+  <rect x="74" y="862" width="18" height="18" rx="3" ry="3" class="folderBlue"/>
+  <text x="105" y="876" class="item">hooks/</text>
+  <rect x="74" y="894" width="18" height="18" rx="3" ry="3" class="folderBlue"/>
+  <text x="105" y="908" class="item">styles/</text>
+  <text x="74" y="944" class="small">App.jsx</text>
+  <text x="74" y="968" class="small">main.jsx</text>
+  <text x="74" y="992" class="small">package.json</text>
+
+  <!-- Backend column -->
+  <rect class="box panel backendPanel" x="380" y="218" width="360" height="800"/>
+  <text x="425" y="248" class="panelTitle">backend/</text>
+
+  <rect x="414" y="270" width="18" height="18" rx="3" ry="3" class="folderGreen"/>
+  <text x="445" y="284" class="item">config/</text>
+  <text x="463" y="310" class="small">db.js</text>
+  <text x="463" y="332" class="small">mailConfig.js</text>
+
+  <rect x="414" y="360" width="18" height="18" rx="3" ry="3" class="folderGreen"/>
+  <text x="445" y="374" class="item">controllers/</text>
+  <text x="463" y="396" class="small">authController.js</text>
+  <text x="463" y="418" class="small">userController.js</text>
+  <text x="463" y="440" class="small">productController.js</text>
+  <text x="463" y="462" class="small">requestController.js</text>
+  <text x="463" y="484" class="small">transactionController.js</text>
+  <text x="463" y="506" class="small">adminController.js</text>
+
+  <rect x="414" y="544" width="18" height="18" rx="3" ry="3" class="folderGreen"/>
+  <text x="445" y="558" class="item">models/</text>
+  <text x="463" y="580" class="small">User.js</text>
+  <text x="463" y="602" class="small">Product.js</text>
+  <text x="463" y="624" class="small">Request.js</text>
+  <text x="463" y="646" class="small">Transaction.js</text>
+  <text x="463" y="668" class="small">Notification.js</text>
+
+  <rect x="414" y="706" width="18" height="18" rx="3" ry="3" class="folderGreen"/>
+  <text x="445" y="720" class="item">routes/</text>
+  <text x="463" y="742" class="small">authRoutes.js</text>
+  <text x="463" y="764" class="small">userRoutes.js</text>
+  <text x="463" y="786" class="small">productRoutes.js</text>
+  <text x="463" y="808" class="small">requestRoutes.js</text>
+  <text x="463" y="830" class="small">transactionRoutes.js</text>
+  <text x="463" y="852" class="small">adminRoutes.js</text>
+
+  <rect x="414" y="888" width="18" height="18" rx="3" ry="3" class="folderGreen"/>
+  <text x="445" y="902" class="item">middleware/</text>
+  <text x="463" y="924" class="small">authMiddleware.js</text>
+  <text x="463" y="946" class="small">adminMiddleware.js</text>
+  <text x="463" y="968" class="small">uploadMiddleware.js</text>
+  <text x="414" y="1002" class="small">server.js</text>
+  <text x="414" y="1026" class="small">package.json</text>
+
+  <!-- Docs column -->
+  <rect class="box panel docsPanel" x="790" y="218" width="300" height="800"/>
+  <text x="835" y="248" class="panelTitle">docs/</text>
+  <text x="836" y="296" class="item">README.md</text>
+  <text x="836" y="324" class="item">SETUP_INSTRUCTIONS.md</text>
+  <text x="836" y="352" class="item">BACKEND_SETUP_SUMMARY.md</text>
+  <text x="836" y="408" class="item">graph LR.mmd</text>
+  <text x="836" y="436" class="item">graph TD.mmd</text>
+  <text x="836" y="464" class="item">repository-structure.svg</text>
+  <text x="836" y="520" class="item">frontend-structure notes</text>
+  <text x="836" y="548" class="item">backend-structure notes</text>
+  <text x="836" y="576" class="item">architecture diagrams</text>
+  <text x="836" y="632" class="item">SRS / planning docs</text>
+  <text x="836" y="660" class="item">API documentation</text>
+  <text x="836" y="688" class="item">project summaries</text>
+
+  <!-- Root level column -->
+  <rect class="box panel rootPanel" x="1130" y="218" width="430" height="800"/>
+  <text x="1175" y="248" class="panelTitle">root level</text>
+  <text x="1175" y="292" class="item">.env</text>
+  <text x="1175" y="320" class="item">.env.example</text>
+  <text x="1175" y="348" class="item">.gitignore</text>
+  <text x="1175" y="376" class="item">package.json</text>
+  <text x="1175" y="404" class="item">package-lock.json</text>
+  <text x="1175" y="460" class="item">frontend/</text>
+  <text x="1175" y="488" class="item">backend/</text>
+  <text x="1175" y="516" class="item">README.md</text>
+  <text x="1175" y="544" class="item">SETUP_INSTRUCTIONS.md</text>
+  <text x="1175" y="572" class="item">BACKEND_SETUP_SUMMARY.md</text>
+  <text x="1175" y="628" class="item">Node.js / npm workspace</text>
+  <text x="1175" y="656" class="item">root scripts</text>
+  <text x="1175" y="684" class="item">shared config</text>
+
+  <!-- simple connectors -->
+  <path class="branch" d="M 230 218 L 230 206"/>
+  <path class="branch" d="M 605 218 L 605 206"/>
+  <path class="branch" d="M 1000 218 L 1000 206"/>
+  <path class="branch" d="M 1350 218 L 1350 206"/>
+
+  <!-- Legend -->
+  <rect x="1020" y="862" width="470" height="150" rx="16" ry="16" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="1255" y="895" text-anchor="middle" class="legendTitle">LEGEND</text>
+  <rect x="1060" y="917" width="18" height="14" class="folderBlue" rx="3" ry="3"/>
+  <text x="1090" y="929" class="small">Frontend</text>
+  <rect x="1180" y="917" width="18" height="14" class="folderGreen" rx="3" ry="3"/>
+  <text x="1210" y="929" class="small">Backend</text>
+  <rect x="1300" y="917" width="18" height="14" class="folderOrange" rx="3" ry="3"/>
+  <text x="1330" y="929" class="small">Docs</text>
+  <rect x="1420" y="917" width="18" height="14" class="folderRed" rx="3" ry="3"/>
+  <text x="1450" y="929" class="small">Root</text>
+  <text x="1060" y="970" class="small">Folders and files are grouped by repository area to match the reference layout.</text>
+  <text x="1060" y="995" class="small">Open this SVG in a browser or VS Code preview for the full image.</text>
+</svg>

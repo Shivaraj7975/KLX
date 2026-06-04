@@ -1,0 +1,35 @@
+graph TD
+    subgraph login["🔐 LOGIN FLOW"]
+        L1["User enters phone<br/>email, name"]
+        L2["Frontend: loginCampusUser()"]
+        L3["Backend: POST /api/auth/login"]
+        L4["Verify/Create User<br/>in MongoDB"]
+        L5["Generate JWT Token<br/>jwt.sign with JWT_SECRET"]
+        L6["Frontend stores token<br/>in localStorage dfreshy:auth"]
+    end
+
+    subgraph listing["📝 CREATE LISTING FLOW"]
+        Li1["User fills listing form<br/>categoryDetector auto-fills"]
+        Li2["Frontend: createListing()"]
+        Li3["Get token from localStorage"]
+        Li4["Backend: POST /api/listings<br/>with Authorization header"]
+        Li5["Middleware: verifyToken()<br/>jwt.verify with JWT_SECRET"]
+        Li6["Create Listing in MongoDB<br/>with sellerId reference"]
+        Li7["Return listing to frontend"]
+    end
+
+    subgraph request["❓ CREATE REQUEST FLOW"]
+        R1["User fills request form"]
+        R2["Frontend: createRequest()"]
+        R3["Backend: POST /api/requests<br/>with token"]
+        R4["Middleware: verifyToken()"]
+        R5["Create Request in MongoDB<br/>with requesterId reference"]
+    end
+
+    L1 --> L2 --> L3 --> L4 --> L5 --> L6
+    Li1 --> Li2 --> Li3 --> Li4 --> Li5 --> Li6 --> Li7
+    R1 --> R2 --> R3 --> R4 --> R5
+
+    style login fill:#e1f5fe
+    style listing fill:#f3e5f5
+    style request fill:#e8f5e9

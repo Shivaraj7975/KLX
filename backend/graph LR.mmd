@@ -1,0 +1,31 @@
+graph LR
+    subgraph dev["Development Environment"]
+        Browser["🌐 Browser<br/>localhost:5173"]
+        FrontendDev["Frontend Dev Server<br/>(Vite - React 18)<br/>Port 5173"]
+        BackendDev["Backend Dev Server<br/>(Express + Nodemon)<br/>Port 5000"]
+    end
+
+    subgraph services["Services & APIs"]
+        FrontendSrc["Frontend Source<br/>src/components<br/>src/pages<br/>src/contexts<br/>src/services"]
+        BackendSrc["Backend Source<br/>routes/<br/>models/<br/>middleware/"]
+    end
+
+    subgraph external["External Services"]
+        MongoDB["MongoDB Atlas<br/>Cloud Database<br/>Cluster: cluster0"]
+    end
+
+    Browser -->|HTTP requests| FrontendDev
+    Browser -->|REST API calls<br/>:5000/api| BackendDev
+    FrontendDev -->|npm run dev| FrontendSrc
+    BackendDev -->|npm run dev<br/>nodemon| BackendSrc
+    
+    BackendDev -->|Mongoose Connection<br/>JWT Verification| MongoDB
+    FrontendDev -->|API Endpoint Base<br/>http://localhost:5000/api| BackendDev
+
+    style dev fill:#e3f2fd
+    style services fill:#f3e5f5
+    style external fill:#e8f5e9
+    style Browser fill:#fff9c4
+    style FrontendDev fill:#c5e1a5
+    style BackendDev fill:#b3e5fc
+    style MongoDB fill:#ffccbc
