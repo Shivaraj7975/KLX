@@ -8,12 +8,35 @@ dotenv.config()
 const app = express()
 
 // Middleware
-app.use(cors())
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'http://localhost:5173',
+  'http://localhost:3000'
+].filter(Boolean)
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps, curl, postman)
+      if (!origin) return callback(null, true)
+      if (allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.includes('*') || !process.env.FRONTEND_URL) {
+        return callback(null, true)
+      }
+      return callback(new Error('Not allowed by CORS'))
+    },
+    credentials: true,
+  })
+)
 app.use(express.json({ limit: '5mb' }))
 
 // MongoDB Connection
 const MONGODB_URI = process.env.MONGODB_URI
 const PORT = process.env.PORT || 5000
+
+if (!MONGODB_URI) {
+  console.error('✗ Error: MONGODB_URI environment variable is missing!')
+  process.exit(1)
+}
 
 mongoose
   .connect(MONGODB_URI)
